@@ -1,0 +1,100 @@
+
+.hero {
+  background: linear-gradient(135deg, #ecf0f6 0%, #f8fbff 100%);
+  color: #2c3e50;
+  padding: 4rem 0;
+  border-radius: 0;
+  margin-bottom: 3rem;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+  border-bottom: 1px solid #e0e6f2;
+
+  .heroTitle {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    color: #2c3e50;
+  }
+
+  .heroSubtitle {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    opacity: 0.8;
+    line-height: 1.6;
+    color: #7f8c8d;
+  }
+
+  .ctaButton {
+    background: #34495e;
+    border: none;
+    padding: 0.75rem 2rem;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    color: white;
+
+    &:hover {
+      background: #2c3e50;
+      box-shadow: 0 6px 16px rgba(52, 73, 94, 0.2);
+      transform: translateY(-2px);
+    }
+  }
+
+  .heroImage {
+    font-size: 5rem;
+    text-align: center;
+    animation: float 3s ease-in-out infinite;
+  }
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+.container {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  flex: 1;
+
+  .sectionTitle {
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 3rem;
+    color: #2c3e50;
+  }
+
+  .featuresSection {
+    margin-bottom: 4rem;
+
+    .featureCard {
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+      height: 100%;
+      transition: all 0.3s ease;
+      border: 1px solid #e8eef7;
+
+      &:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        border-color: #d5dce7;
+      }
+
+      .featureIcon {
+        font-size: 3rem;
+        margin-bottom: 0.5rem;
+      }
+
+      .featureTitle {
+        font-weight: bold;
+        color: #2c3e50;
+        margin-bottom: 0.5rem;
+      }
+    }
+  }
+}

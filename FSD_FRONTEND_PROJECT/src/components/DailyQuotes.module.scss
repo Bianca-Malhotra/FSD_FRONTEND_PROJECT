@@ -1,0 +1,93 @@
+.quotesCard {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  border: 1px solid #e8eef7;
+  margin: 2rem 0;
+
+  .title {
+    font-weight: bold;
+    color: #2c3e50;
+    margin-bottom: 1.5rem;
+  }
+
+  .loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 150px;
+  }
+
+  .error {
+    text-align: center;
+    padding: 2rem;
+    font-weight: bold;
+  }
+
+  .quoteBox {
+    background: linear-gradient(135deg, #ecf0f6 0%, #f8fbff 100%);
+    padding: 2rem;
+    border-radius: 8px;
+    border-left: 4px solid #34495e;
+    margin-bottom: 1.5rem;
+
+    .quoteText {
+      color: #2c3e50;
+      font-style: italic;
+      line-height: 1.8;
+      margin-bottom: 1rem;
+    }
+
+    .author {
+      color: #7f8c8d;
+      text-align: right;
+      font-weight: 600;
+    }
+  }
+
+  .refreshBtn {
+    background: #34495e !important;
+    color: white !important;
+    font-weight: bold;
+    padding: 0.75rem 1.5rem;
+    transition: all 0.3s ease;
+
+    &:hover {
+      background: #2c3e50 !important;
+      box-shadow: 0 4px 12px rgba(52, 73, 94, 0.2);
+    }
+  }
+}
+
+/* Dark Theme Styles */
+[data-theme="dark"] .quotesCard {
+  background: #2d2d2d;
+  border-color: #3d3d3d;
+
+  .title {
+    color: #f5f5f5;
+  }
+
+  .quoteBox {
+    background: linear-gradient(135deg, #3d3d3d 0%, #4d4d4d 100%);
+    border-left-color: #bb86fc;
+
+    .quoteText {
+      color: #e0e0e0;
+    }
+
+    .author {
+      color: #b0b0b0;
+    }
+  }
+
+  .refreshBtn {
+    background: #bb86fc !important;
+    color: #1a1a1a !important;
+
+    &:hover {
+      background: #cf9efc !important;
+      box-shadow: 0 4px 12px rgba(187, 134, 252, 0.3);
+    }
+  }
+}

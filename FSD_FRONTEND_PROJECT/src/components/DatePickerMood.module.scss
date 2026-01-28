@@ -1,0 +1,159 @@
+.datePickerCard {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  border: 1px solid #e8eef7;
+  margin: 2rem 0;
+
+  .title {
+    font-weight: bold;
+    color: #2c3e50;
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+  }
+
+  .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+
+    @media (max-width: 768px) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .formSection {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    input[type='date'] {
+      padding: 0.75rem;
+      border: 1px solid #e8eef7;
+      border-radius: 6px;
+      font-size: 1rem;
+    }
+  }
+
+  .ratingSection {
+    padding: 1rem;
+    background: #f8fbff;
+    border-radius: 8px;
+    text-align: center;
+
+    .ratingLabel {
+      color: #34495e;
+      font-weight: 500;
+      margin-bottom: 1rem;
+    }
+
+    .ratingDisplay {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 1rem;
+    }
+
+    .moodLabel {
+      font-weight: bold;
+      color: #2c3e50;
+      font-size: 1.1rem;
+    }
+  }
+
+  .saveBtn {
+    background: #34495e !important;
+    color: white !important;
+    font-weight: bold;
+    padding: 0.75rem !important;
+    text-transform: none !important;
+
+    &:hover {
+      background: #2c3e50 !important;
+    }
+  }
+
+  .existingMoodBox {
+    background: linear-gradient(135deg, #ecf0f6 0%, #f8fbff 100%);
+    padding: 1.5rem;
+    border-radius: 8px;
+    border-left: 4px solid #34495e;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    .existingLabel {
+      color: #7f8c8d;
+      margin-bottom: 0.5rem;
+      font-size: 0.9rem;
+    }
+
+    .existingValue {
+      color: #2c3e50;
+      font-weight: bold;
+      margin-bottom: 0.5rem;
+    }
+
+    .existingNotes {
+      color: #34495e;
+      font-style: italic;
+      line-height: 1.5;
+    }
+  }
+}
+
+/* Dark Theme Styles */
+[data-theme="dark"] .datePickerCard {
+  background: #2d2d2d;
+  border-color: #3d3d3d;
+
+  .title {
+    color: #f5f5f5;
+  }
+
+  .formSection {
+    input[type='date'] {
+      background: #3d3d3d;
+      color: #e0e0e0;
+      border-color: #555;
+    }
+  }
+
+  .ratingSection {
+    background: #3d3d3d;
+
+    .ratingLabel {
+      color: #e0e0e0;
+    }
+
+    .moodLabel {
+      color: #f5f5f5;
+    }
+  }
+
+  .saveBtn {
+    background: #bb86fc !important;
+    color: #1a1a1a !important;
+
+    &:hover {
+      background: #cf9efc !important;
+    }
+  }
+
+  .existingMoodBox {
+    background: linear-gradient(135deg, #3d3d3d 0%, #4d4d4d 100%);
+    border-left-color: #bb86fc;
+
+    .existingLabel {
+      color: #b0b0b0;
+    }
+
+    .existingValue {
+      color: #f5f5f5;
+    }
+
+    .existingNotes {
+      color: #e0e0e0;
+    }
+  }
+}

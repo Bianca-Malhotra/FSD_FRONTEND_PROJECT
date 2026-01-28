@@ -1,0 +1,273 @@
+.navbar {
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  background: #ffffff !important;
+  border-bottom: 1px solid #e0e6f2;
+
+  .brand {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: #0d0d0d !important;
+    text-decoration: none;
+    transition: transform 0.3s ease;
+
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+
+  .navLink {
+    font-family: 'Poppins', sans-serif;
+    color: #555 !important;
+    margin-left: 1.5rem;
+    font-weight: 600;
+    transition: color 0.3s ease;
+
+    &:hover {
+      color: #0d0d0d !important;
+    }
+  }
+
+  .moodToggleContainer {
+    position: relative;
+    margin-left: 2rem;
+    display: flex;
+    align-items: center;
+  }
+
+  .moodToggleBtn {
+    background: linear-gradient(135deg, #ecf0f6 0%, #f8fbff 100%);
+    border: 2px solid #d5dce7;
+    border-radius: 25px;
+    padding: 0.6rem 1.2rem;
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    color: #0d0d0d;
+    font-size: 0.95rem;
+
+    &:hover {
+      background: linear-gradient(135deg, #dce4f0 0%, #f0f7ff 100%);
+      border-color: #0d0d0d;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(13, 13, 13, 0.15);
+    }
+
+    .moodEmoji {
+      font-size: 0.9rem;
+      display: inline-block;
+      line-height: 1;
+    }
+
+    .moodValue {
+      font-family: 'Playfair Display', serif;
+      font-weight: 700;
+      color: #0d0d0d;
+    }
+  }
+
+  .moodDropdown {
+    position: absolute;
+    top: calc(100% + 0.8rem);
+    right: 0;
+    background: white;
+    border: 2px solid #d5dce7;
+    border-radius: 12px;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+    z-index: 1000;
+    min-width: 160px;
+    justify-content: space-between;
+
+    .moodAdjustBtn {
+      background: #ecf0f6;
+      border: 2px solid #d5dce7;
+      border-radius: 8px;
+      padding: 0.5rem 0.8rem;
+      cursor: pointer;
+      font-size: 1.2rem;
+      transition: all 0.2s ease;
+      font-family: inherit;
+
+      &:hover:not(:disabled) {
+        background: #dce4f0;
+        border-color: #0d0d0d;
+        transform: scale(1.1);
+      }
+
+      &:disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+      }
+    }
+
+    .moodDisplay {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #0d0d0d;
+      min-width: 30px;
+      text-align: center;
+    }
+  }
+
+  .moodSliderContainer {
+    position: absolute;
+    top: calc(100% + 0.8rem);
+    right: 0;
+    background: white;
+    border: 2px solid #d5dce7;
+    border-radius: 12px;
+    padding: 2rem 1.5rem;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+    z-index: 1000;
+    width: 300px;
+
+    .slider {
+      width: 100%;
+
+      :global(.MuiSlider-root) {
+        color: #34495e !important;
+      }
+
+      :global(.MuiSlider-thumb) {
+        background: linear-gradient(135deg, #34495e 0%, #2c3e50 100%) !important;
+        box-shadow: 0 2px 8px rgba(52, 73, 94, 0.3) !important;
+
+        &:hover {
+          box-shadow: 0 4px 12px rgba(52, 73, 94, 0.4) !important;
+        }
+      }
+
+      :global(.MuiSlider-track) {
+        background: linear-gradient(90deg, #ecf0f6 0%, #34495e 100%) !important;
+        height: 6px;
+      }
+
+      :global(.MuiSlider-rail) {
+        background: #e0e6f2 !important;
+        height: 6px;
+      }
+
+      :global(.MuiSlider-mark) {
+        background: #d5dce7;
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+
+        &.MuiSlider-markActive {
+          background: #34495e;
+        }
+      }
+
+      :global(.MuiSlider-markLabel) {
+        font-size: 1.2rem;
+        top: 20px;
+      }
+
+      :global(.MuiSlider-valueLabelCircle) {
+        background: #34495e !important;
+      }
+
+      :global(.MuiSlider-valueLabelLabel) {
+        color: white !important;
+        font-family: 'Playfair Display', serif;
+        font-weight: 700;
+      }
+    }
+  }
+
+  .moodBadge {
+    background: #ecf0f6;
+    padding: 0.5rem 1rem !important;
+    border-radius: 20px;
+    color: #34495e !important;
+    margin-left: 1.5rem;
+    font-weight: bold;
+    cursor: default;
+    border: 1px solid #d5dce7;
+  }
+
+  .themeToggleContainer {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-left: 1.5rem;
+    padding: 0.5rem 0.75rem;
+    border-radius: 25px;
+    background: #ecf0f6;
+    border: 2px solid #d5dce7;
+    transition: all 0.3s ease;
+
+    &:hover {
+      background: #dce4f0;
+      border-color: #0d0d0d;
+    }
+
+    .themeIcon {
+      color: #34495e;
+      font-size: 1.1rem !important;
+    }
+  }
+}
+
+/* Dark Theme Styles */
+[data-theme="dark"] .navbar {
+  background: #2d2d2d !important;
+  border-bottom-color: #3d3d3d;
+
+  .brand {
+    color: #f5f5f5 !important;
+  }
+
+  .navLink {
+    color: #b0b0b0 !important;
+
+    &:hover {
+      color: #f5f5f5 !important;
+    }
+  }
+
+  .moodToggleBtn {
+    background: linear-gradient(135deg, #3d3d3d 0%, #4d4d4d 100%);
+    border-color: #555;
+    color: #e0e0e0;
+
+    &:hover {
+      background: linear-gradient(135deg, #4d4d4d 0%, #5d5d5d 100%);
+      border-color: #f5f5f5;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    }
+
+    .moodValue {
+      color: #e0e0e0;
+    }
+  }
+
+  .moodSliderContainer {
+    background: #2d2d2d;
+    border-color: #3d3d3d;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+  }
+
+  .themeToggleContainer {
+    background: #3d3d3d;
+    border-color: #555;
+
+    &:hover {
+      background: #4d4d4d;
+      border-color: #f5f5f5;
+    }
+
+    .themeIcon {
+      color: #bb86fc;
+    }
+  }
+}

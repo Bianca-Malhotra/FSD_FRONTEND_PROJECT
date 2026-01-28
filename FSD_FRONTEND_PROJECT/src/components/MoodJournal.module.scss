@@ -1,0 +1,136 @@
+.journalCard {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  border: 1px solid #e8eef7;
+  margin: 2rem 0;
+
+  .title {
+    font-weight: bold;
+    color: #2c3e50;
+    margin-bottom: 1.5rem;
+  }
+
+  .textField {
+    margin-bottom: 1.5rem;
+
+    .MuiOutlinedInput-root {
+      border-radius: 8px;
+      background: #f8fbff;
+
+      &:hover fieldset {
+        border-color: #d5dce7;
+      }
+
+      &.Mui-focused fieldset {
+        border-color: #34495e;
+      }
+    }
+
+    .MuiOutlinedInput-input::placeholder {
+      color: #7f8c8d;
+      opacity: 0.7;
+    }
+  }
+
+  .tagLabel {
+    color: #7f8c8d;
+    margin-bottom: 0.75rem;
+    display: block;
+  }
+
+  .tagContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .tag {
+    border-color: #d5dce7 !important;
+    color: #34495e !important;
+    transition: all 0.2s ease;
+
+    &:hover {
+      background: #ecf0f6 !important;
+    }
+  }
+
+  .tagSelected {
+    background: #34495e !important;
+    color: white !important;
+  }
+
+  .saveBtn {
+    background: #34495e !important;
+    color: white !important;
+    font-weight: bold;
+    padding: 0.75rem 1.5rem;
+    transition: all 0.3s ease;
+
+    &:hover {
+      background: #2c3e50 !important;
+      box-shadow: 0 4px 12px rgba(52, 73, 94, 0.2);
+    }
+  }
+}
+
+/* Dark Theme Styles */
+[data-theme="dark"] .journalCard {
+  background: #2d2d2d;
+  border-color: #3d3d3d;
+
+  .title {
+    color: #f5f5f5;
+  }
+
+  .textField {
+    .MuiOutlinedInput-root {
+      background: #3d3d3d;
+
+      &:hover fieldset {
+        border-color: #555;
+      }
+
+      &.Mui-focused fieldset {
+        border-color: #bb86fc;
+      }
+
+      .MuiOutlinedInput-input {
+        color: #e0e0e0;
+      }
+    }
+
+    .MuiOutlinedInput-input::placeholder {
+      color: #888;
+    }
+  }
+
+  .tagLabel {
+    color: #b0b0b0;
+  }
+
+  .tag {
+    border-color: #555 !important;
+    color: #e0e0e0 !important;
+
+    &:hover {
+      background: #3d3d3d !important;
+    }
+  }
+
+  .tagSelected {
+    background: #bb86fc !important;
+    color: #1a1a1a !important;
+  }
+
+  .saveBtn {
+    background: #bb86fc !important;
+    color: #1a1a1a !important;
+
+    &:hover {
+      background: #cf9efc !important;
+      box-shadow: 0 4px 12px rgba(187, 134, 252, 0.3);
+    }
+  }
+}

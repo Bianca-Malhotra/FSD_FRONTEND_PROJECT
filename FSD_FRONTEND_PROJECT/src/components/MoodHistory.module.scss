@@ -1,0 +1,181 @@
+.historyCard {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  border: 1px solid #e8eef7;
+  margin: 2rem 0;
+
+  .title {
+    font-weight: bold;
+    color: #2c3e50;
+    margin-bottom: 1.5rem;
+  }
+
+  .empty {
+    text-align: center;
+    padding: 2rem;
+    color: #7f8c8d;
+  }
+
+  .entriesList {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-height: 600px;
+    overflow-y: auto;
+    padding-right: 0.5rem;
+
+    &::-webkit-scrollbar {
+      width: 6px;
+    }
+
+    &::-webkit-scrollbar-track {
+      background: #f1f1f1;
+      border-radius: 10px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: #d5dce7;
+      border-radius: 10px;
+
+      &:hover {
+        background: #34495e;
+      }
+    }
+  }
+
+  .entryCard {
+    background: #f8fbff;
+    border-radius: 8px;
+    border: 1px solid #e8eef7;
+    transition: all 0.2s ease;
+
+    &:hover {
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      border-color: #d5dce7;
+    }
+  }
+
+  .entryContent {
+    padding: 1rem !important;
+  }
+
+  .entryHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 0.75rem;
+  }
+
+  .moodInfo {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex: 1;
+  }
+
+  .emoji {
+    font-size: 2rem;
+  }
+
+  .entryMoodScore {
+    font-weight: bold;
+    color: #2c3e50;
+    margin-bottom: 0.25rem;
+  }
+
+  .entryTime {
+    color: #7f8c8d;
+  }
+
+  .expandBtn {
+    color: #7f8c8d;
+  }
+
+  .tagsBox {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .tag {
+    background: white !important;
+    border: 1px solid #d5dce7 !important;
+    color: #34495e !important;
+    font-size: 0.75rem;
+    height: 24px;
+  }
+
+  .notes {
+    color: #2c3e50;
+    padding: 1rem;
+    background: white;
+    border-radius: 4px;
+    margin-top: 0.75rem;
+    border-left: 3px solid #34495e;
+    line-height: 1.5;
+  }
+}
+
+/* Dark Theme Styles */
+[data-theme="dark"] .historyCard {
+  background: #2d2d2d;
+  border-color: #3d3d3d;
+
+  .title {
+    color: #f5f5f5;
+  }
+
+  .empty {
+    color: #b0b0b0;
+  }
+
+  .entriesList {
+    &::-webkit-scrollbar-track {
+      background: #3d3d3d;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: #555;
+
+      &:hover {
+        background: #bb86fc;
+      }
+    }
+  }
+
+  .entryCard {
+    background: #3d3d3d;
+    border-color: #555;
+
+    &:hover {
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+      border-color: #666;
+    }
+  }
+
+  .entryMoodScore {
+    color: #f5f5f5;
+  }
+
+  .entryTime {
+    color: #b0b0b0;
+  }
+
+  .expandBtn {
+    color: #b0b0b0;
+  }
+
+  .tag {
+    background: #2d2d2d !important;
+    border-color: #555 !important;
+    color: #e0e0e0 !important;
+  }
+
+  .notes {
+    color: #e0e0e0;
+    background: #3d3d3d;
+    border-left-color: #bb86fc;
+  }
+}
