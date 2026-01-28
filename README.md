@@ -1,7 +1,3 @@
-Here is a **short and crisp description** of the screenshots:
-
----
-
 **MoodCanvas** is a mood-tracking and emotional well-being web application.
 
 * The **Home page** introduces the app and allows users to log their mood (Sad to Ecstatic) with a clean, friendly interface.
